@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #ef4444;
+  --primary-red-light: #f87171;
+  --primary-red-dark: #dc2626;
+  --bg-light: #fafbfb;
+  --text-dark: #434343;
+  --text-gray: #848484;
+  --input-bg: #f5f5f5;
+  --border-color: #e5e5e5;
+
+  --background: 0 0% 98%;
+  --foreground: 0 0% 26%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 26%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 26%;
+  --primary: 0 84% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 26%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 52%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 26%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 0 84% 60%;
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  direction: rtl;
+  min-height: 100vh;
+}
+
+input {
+  font-family: 'Tajawal', sans-serif;
+}
+
+input::placeholder {
+  color: var(--text-gray);
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.otp-digit {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.otp-digit:nth-child(1) {
+  color: #7a7592;
+  transform: rotate(-5deg);
+}
+
+.otp-digit:nth-child(2) {
+  color: #4a9d4a;
+  transform: rotate(3deg) translateY(-2px);
+}
+
+.otp-digit:nth-child(3) {
+  color: #e67e22;
+  transform: rotate(-2deg);
+}
+
+.otp-digit:nth-child(4) {
+  color: #3498db;
+  transform: rotate(5deg) translateY(2px);
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
