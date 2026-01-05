@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientBody from "./ClientBody";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Brixa - منصة التسجيل",
@@ -19,10 +18,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
           rel="stylesheet"
-        />
-        <Script
-          crossOrigin="anonymous"
-          src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
